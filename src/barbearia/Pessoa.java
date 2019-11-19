@@ -69,13 +69,14 @@ public class Pessoa {
     }
     
     public void menu(){
-        
+        int num;
+        do{
         System.out.println("--------BARBEARIA IMPERIO--------");
         System.out.println("\n\n\n   1 - Marcar corte");
         System.out.println("         2 - ver cortes marcados");
         System.out.println("         3 - Sair");
-        int num;
-        do{
+        
+        
          num= entrada.nextInt();
         
         switch(num){
@@ -91,22 +92,21 @@ public class Pessoa {
                 System.out.println("Digite uma opção valida....");
         }
         }while(num!=3);
+        
+        
     }
-    
-    
-    
     public void cadastrar(){
-        int cont=0;
+        boolean cont=false;
         do{
      System.out.println("TELA DE CADASTRO");
                 System.out.println(" 1 - Cliente 2 - Funcionario");
                 int num2=entrada.nextInt();
                 if(num2==1){
                     System.out.println("digite o nome do cliente:");
-                        String nome= entrada.next();
-                        pessoas.add(new Cliente(nome,"Kassio Dantas",this.cod++, this.quantPessoas++,12.3));
+                        String nome1;
+                        pessoas.add(new Cliente(nome1=entrada.next(),"Kassio Dantas",this.cod++, this.quantPessoas++,12.30));
                         System.out.println("cliente cadastrado na lista de corte");
-                        cont++;
+                        cont=true;
                         break;
                 }
                 else if(num2==2){
@@ -114,15 +114,21 @@ public class Pessoa {
                        String nomeF= entrada.next();
                         pessoas.add(new Funcionario(nomeF,"Kassio Dantas",2, 3,12.3));
                         System.out.println("funcionario cadastrado na lista de corte");
-                        cont++;
+                        cont=true;
                         break;
+                        
                         
                     
                 } else System.out.println("Tipo de pessoa não identificada, por favor tente de novo....");
-                
-        }while(cont>0);
+        }while(cont==false);     
+        }
         
     
+    }    
     
-    }
-}
+    
+    
+    
+    
+    
+    

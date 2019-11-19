@@ -15,4 +15,9 @@ public class Funcionario extends Pessoa{
         super(nomeCliente, nomeBarbeiro, cod, quantPessoas, horaMarcada);
     }
     
+    
+    @Override
+    public String toString() {
+        return "Funcionrio" + super.getNomeCliente() +"cortara cabelo com"+ super.getNomeBarbeiro() +"seu codigo é"+ super.getCod() + super.getQuantPessoas() + super.getHoraMarcada();
+    }
 }

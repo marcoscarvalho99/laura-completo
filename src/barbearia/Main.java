@@ -9,6 +9,7 @@ public class Main {
     Pessoa nova = new Pessoa(); 
     
     nova.menu();
+    nova.toString();
     }
     
 }

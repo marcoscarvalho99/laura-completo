@@ -6,6 +6,11 @@ public class Cliente extends Pessoa {
         super(nomeCliente, nomeBarbeiro, cod, quantPessoas, horaMarcada);
     }
 
+    @Override
+    public String toString() {
+        return "Cliente" + super.getNomeCliente() + super.getNomeBarbeiro() + super.getCod() + super.getQuantPessoas() + super.getHoraMarcada();
+    }
+
    
     
     
